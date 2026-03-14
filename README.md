@@ -26,6 +26,10 @@ Dado uma URL longa, o sistema gera uma URL encurtada única. Ao acessar a URL en
 
 ---
 
+## System Design
+
+![texto alternativo](system-design.png "título opcional")
+
 ## Tecnologias
 
 | Tecnologia                  | Versão  | Uso                             |
