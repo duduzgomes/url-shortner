@@ -96,6 +96,7 @@ Encurta uma URL longa.
   "message": "Limite de requisições excedido.",
   "timestamp": "2026-03-14T00:00:00Z"
 }
+```
 
 ---
 
@@ -108,8 +109,7 @@ Redireciona para a URL original.
 ```
 
 Location: https://www.google.com
-
-````
+```
 
 **Response 404 — Short code não encontrado:**
 
@@ -120,7 +120,7 @@ Location: https://www.google.com
   "message": "URL não encontrada para o código: xK9p",
   "timestamp": "2026-03-14T00:00:00Z"
 }
-````
+```
 
 ---
 
@@ -227,7 +227,3 @@ open target/site/jacoco/index.html
 | `url_cache_hit_total`          | Total de cache hits      |
 | `url_cache_miss_total`         | Total de cache misses    |
 | `http_server_requests_seconds` | Latência por endpoint    |
-
-```
-
-```
