@@ -1,0 +1,28 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+  cassandra:
+    contact-points: ${SPRING_CASSANDRA_CONTACT_POINTS}
+    port: ${SPRING_CASSANDRA_PORT}
+
+  data:
+    redis:
+      host: ${SPRING_DATA_REDIS_HOST}
+      port: ${SPRING_DATA_REDIS_PORT}
+
+app:
+  base-url: ${APP_BASE_URL}
+
+resilience4j:
+  ratelimiter:
+    instances:
+      shorten:
+        limit-for-period: ${RATE_LIMIT_SHORTEN:10}
+        limit-refresh-period: ${RATE_LIMIT_REFRESH:1m}
+        timeout-duration: 0s
+      redirect:
+        limit-for-period: ${RATE_LIMIT_REDIRECT:100}
+        limit-refresh-period: ${RATE_LIMIT_REFRESH:1m}
+        timeout-duration: 0s

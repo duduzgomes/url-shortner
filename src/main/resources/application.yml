@@ -1,0 +1,39 @@
+spring:
+  profiles:
+    active: dev
+
+  application:
+    name: url-shortener
+
+  cassandra:
+    keyspace-name: url_shortener
+    local-datacenter: datacenter1
+    schema-action: create-if-not-exists
+
+  cache:
+    type: redis
+    redis:
+      time-to-live: 60000
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
+# hashids:
+#   secret: ${HASHIDS_SECRET:dev-secret-key}
+#   min-length: 4
+
+# id-generator:
+#   initial-value: 14000000
+#   range-size: 1000

@@ -1,0 +1,17 @@
+/mvnw text eol=lf
+*.cmd text eol=crlf
+
+# Windows
+* text=auto
+
+# scripts sempre LF
+*.sh text eol=lf
+
+# arquivos de configuração sempre LF
+*.yml text eol=lf
+*.yaml text eol=lf
+*.conf text eol=lf
+
+# Windows específico sempre CRLF
+*.cmd text eol=crlf
+*.bat text eol=crlf
